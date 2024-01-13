@@ -1,16 +1,9 @@
 #!/usr/bin/python3
 def uniq_add(my_list=[]):
-    unique_sum = 0
-    seen_numbers = set()
+    # Use a set to eliminate duplicate values
+    uniq_values = set(my_list)
 
-    for num in my_list:
-        if num not in seen_numbers:
-            unique_sum += num
-            seen_numbers.add(num)
+    # Add all unique values together
+    total = sum(uniq_values)
 
-    return unique_sum
-
-# Example usage:
-my_list = [1, 2, 3, 1, 4, 2, 5]
-result = uniq_add(my_list)
-print("Result: {:d}".format(result))
+    return total
